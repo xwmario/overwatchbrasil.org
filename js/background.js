@@ -1,43 +1,47 @@
-var player;
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
 
-function onYouTubePlayerAPIReady() {
-    player = new YT.Player('player', {
-        playerVars: {
-            'autoplay': 1,
-            'controls': 0,
-            'autohide': 1,
-            'wmode': 'opaque',
-            'showinfo': 0,
-            'loop': 1,
-            'mute': 1,
-            'start': 15,
-            'end': 327,
-            'playlist': 'dushZybUYnM'
-        },
-        videoId: 'dushZybUYnM',
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-}
-
-function onPlayerReady(event) {
-    event.target.mute();
-    $('#text').fadeIn(400);
-    //why this? Well, if you want to overlay text on top of your video, you
-    //will have to fade it in once your video has loaded in order for this
-    //to work in Safari, or your will get an origin error.
-}
-
-//this pauses the video when it's out of view, just wrap your video in .m-//video
-$(window).scroll(function() {
-    var hT = $('.m-video').height(),
-        wS = $(this).scrollTop();
-    if (wS > hT) {
-        player.pauseVideo();
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            playerVars: {
+                'autoplay': 1,
+                'controls': 0,
+                'autohide': 1,
+                'wmode': 'opaque',
+                'showinfo': 0,
+                'loop': 1,
+                'mute': 1,
+                'start': 15,
+                'end': 327,
+                'playlist': 'dushZybUYnM'
+            },
+            videoId: 'dushZybUYnM',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
     }
-    else {
-        player.playVideo();
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
     }
-});
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+        player.mute();
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }

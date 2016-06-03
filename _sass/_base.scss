@@ -57,6 +57,7 @@ p {
 
 section {
     padding: 100px 0;
+    background-color: white;
 }
 
 aside {
@@ -65,6 +66,15 @@ aside {
 
 .no-padding {
     padding: 0;
+}
+
+// backgroud
+#player {
+    position: fixed;
+    z-index: -99;
+    height: 107vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 // Navigation
@@ -109,7 +119,7 @@ aside {
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
+        background-color: black;
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
             color: rgba(white, .7);
@@ -125,25 +135,25 @@ aside {
                 color: white;
             }
         }
-        &.affix {
-            background-color: white;
-            border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
-                color: $theme-primary;
-                font-size: 14px;
-                &:hover,
-                &:focus {
-                    color: darken($theme-primary, 10%);
-                }
-            }
-            .nav > li > a,
-            .nav > li > a:focus {
-                color: $theme-dark;
-                &:hover {
-                    color: $theme-primary;
-                }
+
+        background-color: white;
+        border-color: rgba($theme-dark, .5);
+        .navbar-header .navbar-brand {
+            color: $theme-primary;
+            font-size: 14px;
+            &:hover,
+            &:focus {
+                color: darken($theme-primary, 10%);
             }
         }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: $theme-dark;
+            &:hover {
+                color: $theme-primary;
+            }
+        }
+
     }
 }
 
@@ -223,6 +233,7 @@ header {
 }
 
 .portfolio-box {
+    background-color: white;
     position: relative;
     display: block;
     max-width: 650px;
@@ -275,6 +286,13 @@ header {
                 }
             }
         }
+    }
+}
+
+#contact {
+    background: rgba( $theme-primary, .9 );
+    .discord-logo {
+        width: 200px;
     }
 }
 
