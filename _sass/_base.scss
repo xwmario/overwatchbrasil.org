@@ -1,3 +1,20 @@
+@font-face {
+    font-family: Big Noodle Too;
+    src: url(https://d281jof1t1i5a5.cloudfront.nethttps://d281jof1t1i5a5.cloudfront.net/big-noodle-too-6c57d058d1979cbf30e5b5b02638ef0d835f2c29502e0efa328ff91f75e8412a9c82fbf440b896377ed62506d1787666f67f81b99ef004a230c6fcf084b7a3fa.eot);
+    src: url(https://d281jof1t1i5a5.cloudfront.nethttps://d281jof1t1i5a5.cloudfront.net/big-noodle-too.eot?#iefix) format("embedded-opentype"),url(https://d281jof1t1i5a5.cloudfront.net/fonts/big-noodle-too-oblique-0762bcfb7ce452ecfa21830ab40ee34f9bf2e6fbcecb649c8995bd59fdf93a74a8345855c3890ec3901ac7ca442040112f37f387c98a57ced5af61d92ee8e06c.woff) format("woff"),url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too-6fb923dc5ced5be50c4912cfefa93d8b09a54f1947dc5ca4584c79dfd393cdd4b166d0e8c7dee293f0df2f84c878b7846a83770941504b1b24671c2854577ce9.ttf) format("truetype"),url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too.svg#bignoodletoo) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Big Noodle Too;
+    src: url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too-oblique-903d64d3da120253768ac916e2de43cffcc73b4bfe48f8c0a2389951aefee08ebb0efe2463c0d6e4ee1c705fbe0a9b28d78e48a7b52451771c0cec872381873d.eot);
+    src: url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too-oblique.eot?#iefix) format("embedded-opentype"),url(https://d281jof1t1i5a5.cloudfront.net/fonts/big-noodle-too-oblique-0762bcfb7ce452ecfa21830ab40ee34f9bf2e6fbcecb649c8995bd59fdf93a74a8345855c3890ec3901ac7ca442040112f37f387c98a57ced5af61d92ee8e06c.woff) format("woff"),url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too-oblique-feb40854f431c46dcc2dd7bf2e4064bfd0617105de546a2415208b9ac38816d19a25a3631d3a88575e1c7a513d14f56defd342c3354f5d65f5ad1aef16c59402.ttf) format("truetype"),url(https://d281jof1t1i5a5.cloudfront.net/big-noodle-too-oblique.svg#bignoodletoo) format("svg");
+    font-weight: 400;
+    font-style: italic
+}
+
+
 html,
 body {
     height: 100%;
@@ -35,7 +52,12 @@ h5,
 h6 {
     @include sans-serif-font;
 }
-
+h1 {
+    font-style: 120px;
+}
+h2 {
+    font-size: 60px;
+}
 p {
     font-size: 16px;
     line-height: 1.5;
@@ -104,7 +126,7 @@ aside {
             > a:focus {
                 text-transform: uppercase;
                 font-weight: 700;
-                font-size: 13px;
+                font-size: 24px;
                 color: $theme-dark;
                 &:hover {
                     color: $theme-primary;
