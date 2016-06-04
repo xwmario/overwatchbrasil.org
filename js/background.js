@@ -41,6 +41,9 @@
     var done = false;
     function onPlayerStateChange(event) {
         player.mute();
+        $('header').stop().fadeOut("1000", function () {
+            $(this).css("background", "transparent").fadeIn(1000);
+        });
     }
     function stopVideo() {
         player.stopVideo();
