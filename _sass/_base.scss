@@ -75,6 +75,7 @@ aside {
     height: 107vh;
     width: 100%;
     overflow: hidden;
+    margin-top: -5px;
 }
 
 // Navigation
@@ -92,6 +93,9 @@ aside {
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
+        }
+        img {
+            width: 15rem;
         }
     }
     .nav {
@@ -119,9 +123,10 @@ aside {
         }
     }
     @media (min-width: 768px) {
-        background-color: black;
+        background-color: rgba(white, 0.5);
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
+            padding: 6px 15px;
             color: rgba(white, .7);
             &:hover,
             &:focus {
@@ -136,7 +141,7 @@ aside {
             }
         }
 
-        background-color: white;
+        background-color: rgba(white, 0.5);
         border-color: rgba($theme-dark, .5);
         .navbar-header .navbar-brand {
             color: $theme-primary;
@@ -164,7 +169,7 @@ header {
     width: 100%;
     min-height: auto;
     @include background-cover;
-    background: rgba(255, 255, 255, 0.5) url(/img/static_background.jpg) center;
+    background: rgba(255, 255, 255, 0.5) url(/img/static_background.jpg) center repeat-x;
     text-align: center;
     color: white;
     &:before {
