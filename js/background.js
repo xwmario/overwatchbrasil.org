@@ -22,9 +22,9 @@ if (!isMobile.any) {
                 'mute': 1,
                 'start': 15,
                 'end': 327,
-                'playlist': 'eYNCCu0y-Is'
+                'playlist': 'Vt34mCul4PQ'
             },
-            videoId: 'eYNCCu0y-Is',
+            videoId: 'Vt34mCul4PQ',
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
